@@ -8,11 +8,12 @@ Currently does:
 
 Todo:
 1. compare from certain path downwards rather than just filename (i.e. may exist in other sub-directories)
-2. GUI: 
+2. GUI:
     a. for selecting directories
     b. allowing you to open duplicates where mismatches occur (dependent on 1.)
 3. Duplicate file comparison based on contents (e.g. one file might be more up to date)
 4. Edit date comparison.
+5. Unit testing
 """
 
 def get_file_dict(directory):
