@@ -14,6 +14,7 @@ Todo:
 2. Duplicate file comparison based on contents (e.g. one file might be more up to date)
 3. Edit date comparison.
 4. Unit testing
+5. Turn off certain files/folders and keep track of this such that it wont be included in the comparison. (for example an external hdd may not want installer exes)
 """
 
 def get_file_dict(directory):
@@ -24,7 +25,8 @@ def get_file_dict(directory):
     for root, dirs, files in os.walk(thisdir):
         for file in files:
             #print(root, dirs, files)
-            driveless_directory = thisdir[3:] #Strip drive letter for file comparison (e.g. E:\)
+            drive_slash = thisdir.find('\\')+1
+            driveless_directory = thisdir[drive_slash:] #Strip drive letter for file comparison (e.g. E:\)
             file_path = os.path.join(root, file)
             first_slash = file_path.find('\\')+1
             full_path = file_path[first_slash:]
