@@ -15,3 +15,9 @@ def get_dict_differences(dict1, dict2):
 def get_dict_intersecting_keys(dict1, dict2):
 	intersecting_keys = list(set(dict1.keys()) & set(dict2.keys()))
 	return intersecting_keys
+
+
+def get_dict_where_value_differs(dict1, dict2):
+	intersecting_keys = get_dict_intersecting_keys(dict1, dict2)
+	different_values = {key: (dict1[key], dict2[key]) for key in intersecting_keys if dict1[key] != dict2[key]}
+	return different_values

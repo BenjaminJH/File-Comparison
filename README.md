@@ -4,9 +4,9 @@ Future iterations should include a gui, individual differences, duplicate file i
 
 example run command from commandline:
 
-`python --dir1='C:\Users\MyDir\test_a' --dir2='E:\ExternalDrive\test_b' --search_type="path"`
+`python src/cli/cli.py --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="path"`
 
-`python --dir1='C:\Users\MyDir\test_a' --dir2='E:\ExternalDrive\test_b' --search_type="count"`
+`python src/cli/cli.py --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="count"`
 
 ## Flags
 
@@ -19,7 +19,7 @@ example run command from commandline:
 
 # PROGRESS LISTING
 
-Currently provides a cli which handles some of the following:
+This project currently provides a cli which handles some of the following:
 
 - File path comparison between two directories
 - Exact file name occurrence count comparing two directories
@@ -32,4 +32,3 @@ Todo:
 2. Duplicate file comparison based on contents (e.g. one file might be more up to date)
 3. Edit date comparison.
 4. Turn off certain files/folders and keep track of this such that it wont be included in the comparison. (for example an external hdd may not want installer exes)
-5. Finish unit tests
