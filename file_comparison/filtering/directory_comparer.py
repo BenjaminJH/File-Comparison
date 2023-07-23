@@ -1,5 +1,5 @@
 from .collection_tools import get_list_differences, get_dict_differences, get_dict_where_value_differs
-from src.loader.directory_reader import DirectoryReader
+from file_comparison.loader.directory_reader import DirectoryReader
 
 LONG_BREAK = "-"*50
 

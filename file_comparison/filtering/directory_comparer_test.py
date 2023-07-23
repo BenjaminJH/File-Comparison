@@ -1,6 +1,6 @@
 import unittest
-from src.filtering.collection_tools import get_dict_differences
-from src.filtering.directory_comparer import DirectoryComparer
+from file_comparison.filtering.collection_tools import get_dict_differences
+from file_comparison.filtering.directory_comparer import DirectoryComparer
 
 
 class TestDirectoryComparer(unittest.TestCase):
