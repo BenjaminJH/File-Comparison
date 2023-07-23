@@ -1,8 +1,7 @@
 import pytest
 import os
 import test
-from src.filtering.collection_tools import get_dict_differences
-from src.filtering.directory_comparer import DirectoryComparer
+from file_comparison.filtering.directory_comparer import DirectoryComparer
 
 path = os.path.dirname(test.__file__)
 dir1 = os.path.join(path, "example_directories", "test_directory_a")

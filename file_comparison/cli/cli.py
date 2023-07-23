@@ -1,5 +1,5 @@
 import click
-from src.filtering.directory_comparer import DirectoryComparer
+from file_comparison.filtering.directory_comparer import DirectoryComparer
 
 
 @click.command()
