@@ -10,13 +10,13 @@ class TestDirectoryComparer(unittest.TestCase):
 		file_count_dict_b = {'file_a.txt': 3, 'file_b.txt': 1, 'file_d.txt': 1}
 		dict1_only, dict2_only = get_dict_differences(file_count_dict_a, file_count_dict_b)
 		expected_directory_a_str = """
-			Files in Primary Directory, but in Secondary Directory
+			Files in Primary Directory, but not in Secondary Directory
 			--------------------------------------------------
 			file_c.txt
 			--------------------------------------------------
 			1 exist in the Primary Directory, but not in the Secondary Directory.""".replace("\t", "")
 		expected_directory_b_str = """
-			Files in Primary Directory, but in Secondary Directory
+			Files in Primary Directory, but not in Secondary Directory
 			--------------------------------------------------
 			file_b.txt
 			file_d.txt

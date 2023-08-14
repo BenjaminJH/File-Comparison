@@ -60,7 +60,7 @@ class DirectoryComparer:
 		:param dir_b_str: [Secondary Directory|Primary Directory]
 		:return built_string: output strings from comparing 2 directories
 		"""
-		header = f"\nFiles in {dir_a_str}, but in {dir_b_str}"
+		header = f"\nFiles in {dir_a_str}, but not in {dir_b_str}"
 		footer = f"{len(unique_to_dir_a)} exist in the {dir_a_str}, but not in the {dir_b_str}."
 		built_string = "\n".join([header, LONG_BREAK, "\n".join(sorted(unique_to_dir_a)), LONG_BREAK, footer])
 

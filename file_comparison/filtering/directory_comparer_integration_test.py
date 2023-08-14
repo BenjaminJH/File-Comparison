@@ -14,7 +14,7 @@ def test_compare_by_file_path():
 		.replace("\\", "/")  # Accounting in case of windows
 	expected_str = """#COMPARISON BY FILE PATH#
 		
-		Files in Primary Directory, but in Secondary Directory
+		Files in Primary Directory, but not in Secondary Directory
 		--------------------------------------------------
 		/file_c.txt
 		/subdirectory_depth1_1/file_c.txt
@@ -22,7 +22,7 @@ def test_compare_by_file_path():
 		--------------------------------------------------
 		3 exist in the Primary Directory, but not in the Secondary Directory.
 		
-		Files in Secondary Directory, but in Primary Directory
+		Files in Secondary Directory, but not in Primary Directory
 		--------------------------------------------------
 		/file_b.txt
 		/subdirectory_depth1_1/file_a.txt
@@ -37,13 +37,13 @@ def test_compare_by_file_count():
 	built_str = DirectoryComparer(dir1, dir2).compare_by_file_count()
 	expected_str = """#COMPARISON BY FILE COUNT#
 		
-		Files in Primary Directory, but in Secondary Directory
+		Files in Primary Directory, but not in Secondary Directory
 		--------------------------------------------------
 		file_c.txt
 		--------------------------------------------------
 		1 exist in the Primary Directory, but not in the Secondary Directory.
 		
-		Files in Secondary Directory, but in Primary Directory
+		Files in Secondary Directory, but not in Primary Directory
 		--------------------------------------------------
 		file_b.txt
 		--------------------------------------------------
