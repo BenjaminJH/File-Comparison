@@ -1,7 +1,7 @@
 # set base image (host OS)
 FROM python:3.9.18 as build
 
-# Set working directory to project to have changes compartmentali
+# Set working directory to project to have changes compartmentalised
 WORKDIR project/
 
 # Set environment variable path

@@ -4,9 +4,7 @@ Future iterations should include a gui, individual differences, duplicate file i
 
 example run command from commandline:
 
-`python src/cli/cli.py --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="path"`
-
-`python src/cli/cli.py --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="count"`
+    python src/cli/cli.py --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="path"
 
 ## Flags
 
@@ -16,6 +14,15 @@ example run command from commandline:
 
 **NOTE:** End folders do not need the same name. Though you should be comparing folders with matching content.
 
+# Building and running
+
+From the root of the project run the following to build the image:
+
+    docker build -t file-comparison .
+
+Run the image using the following, replace the flags with your relevant inputs:
+
+    docker run file-comparison --dir1='C:/Users/MyDir/test_a' --dir2='E:/ExternalDrive/test_b' --search_type="path"
 
 # PROGRESS LISTING
 
